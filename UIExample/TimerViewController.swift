@@ -20,14 +20,21 @@ class TimerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var sliderOutlet: UISlider!
+    
+    @IBAction func time_slider(_ sender: UISlider) {
+        seconds = Int(sender.value)
+        label.text = String(seconds)
+        
+    }
     @IBOutlet weak var label: UILabel!
     
     
     @IBAction func startButton(_ sender: UIButton) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerViewController.counter), userInfo: nil, repeats: true)
         
-        //sliderOutlet.isHidden = true
-        view.backgroundColor = .green
+        sliderOutlet.isHidden = true
+        view.backgroundColor = .lightGray
         startOutlet.isHidden = true
         
     }
@@ -41,11 +48,11 @@ class TimerViewController: UIViewController {
         timer.invalidate()
         view.backgroundColor = .red
         seconds = 10
-        //sliderOutlet.setValue(30, animated: true)
+        sliderOutlet.setValue(10, animated: true)
         label.text = "10 seconds"
-        
-        //sliderOutlet.isHidden = false
+        sliderOutlet.isHidden = false
         startOutlet.isHidden = false
+        view.backgroundColor = .darkGray
     }
     
     @objc func counter()

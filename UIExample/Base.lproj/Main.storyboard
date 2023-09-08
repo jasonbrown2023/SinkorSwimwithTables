@@ -132,9 +132,16 @@
                                     <action selector="stopButton:" destination="FKB-hL-ae5" eventType="touchUpInside" id="U5V-EO-2X4"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="5" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Yd8-3P-hCC">
+                                <rect key="frame" x="42" y="367" width="286" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="time_slider:" destination="FKB-hL-ae5" eventType="valueChanged" id="v2q-HS-nOG"/>
+                                </connections>
+                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHl-Q1-EaA">
-                                <rect key="frame" x="103" y="254" width="185" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="44" y="212" width="282" height="114"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -152,6 +159,7 @@
                     <navigationItem key="navigationItem" id="v56-h4-htl"/>
                     <connections>
                         <outlet property="label" destination="zHl-Q1-EaA" id="p94-lP-kJu"/>
+                        <outlet property="sliderOutlet" destination="Yd8-3P-hCC" id="WVY-xo-tQh"/>
                         <outlet property="startOutlet" destination="eGN-rs-bl7" id="eNF-ZM-0Vd"/>
                         <outlet property="stopOutlet" destination="DiN-LM-gf8" id="XQe-TL-Umy"/>
                     </connections>
