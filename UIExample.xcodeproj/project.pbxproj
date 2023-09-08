@@ -13,6 +13,11 @@
 		175DD7A72AA5090500A5D782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175DD7A52AA5090500A5D782 /* Main.storyboard */; };
 		175DD7A92AA5090B00A5D782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175DD7A82AA5090B00A5D782 /* Assets.xcassets */; };
 		175DD7AC2AA5090B00A5D782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175DD7AA2AA5090B00A5D782 /* LaunchScreen.storyboard */; };
+		175DD7B62AA5165100A5D782 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 175DD7B52AA5165100A5D782 /* ImageModel.m */; };
+		175DD7B82AA52BBD00A5D782 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DD7B72AA52BBD00A5D782 /* TableViewController.swift */; };
+		175DD7BA2AA536D700A5D782 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DD7B92AA536D700A5D782 /* CollectionViewController.swift */; };
+		175DD7BC2AA5390500A5D782 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DD7BB2AA5390500A5D782 /* CollectionViewCell.swift */; };
+		175DD7C02AA6868900A5D782 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175DD7BF2AA6868900A5D782 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,13 @@
 		175DD7A82AA5090B00A5D782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		175DD7AB2AA5090B00A5D782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		175DD7AD2AA5090B00A5D782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		175DD7B32AA5165000A5D782 /* UIExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		175DD7B42AA5165100A5D782 /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		175DD7B52AA5165100A5D782 /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		175DD7B72AA52BBD00A5D782 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		175DD7B92AA536D700A5D782 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		175DD7BB2AA5390500A5D782 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		175DD7BF2AA6868900A5D782 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +71,17 @@
 				175DD79F2AA5090500A5D782 /* AppDelegate.swift */,
 				175DD7A12AA5090500A5D782 /* SceneDelegate.swift */,
 				175DD7A32AA5090500A5D782 /* ViewController.swift */,
+				175DD7B42AA5165100A5D782 /* ImageModel.h */,
+				175DD7B52AA5165100A5D782 /* ImageModel.m */,
 				175DD7A52AA5090500A5D782 /* Main.storyboard */,
+				175DD7BF2AA6868900A5D782 /* TimerViewController.swift */,
+				175DD7BB2AA5390500A5D782 /* CollectionViewCell.swift */,
+				175DD7B92AA536D700A5D782 /* CollectionViewController.swift */,
+				175DD7B72AA52BBD00A5D782 /* TableViewController.swift */,
 				175DD7A82AA5090B00A5D782 /* Assets.xcassets */,
 				175DD7AA2AA5090B00A5D782 /* LaunchScreen.storyboard */,
 				175DD7AD2AA5090B00A5D782 /* Info.plist */,
+				175DD7B32AA5165000A5D782 /* UIExample-Bridging-Header.h */,
 			);
 			path = UIExample;
 			sourceTree = "<group>";
@@ -99,6 +118,7 @@
 				TargetAttributes = {
 					175DD79B2AA5090500A5D782 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -138,9 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175DD7BA2AA536D700A5D782 /* CollectionViewController.swift in Sources */,
 				175DD7A42AA5090500A5D782 /* ViewController.swift in Sources */,
 				175DD7A02AA5090500A5D782 /* AppDelegate.swift in Sources */,
+				175DD7BC2AA5390500A5D782 /* CollectionViewCell.swift in Sources */,
+				175DD7C02AA6868900A5D782 /* TimerViewController.swift in Sources */,
 				175DD7A22AA5090500A5D782 /* SceneDelegate.swift in Sources */,
+				175DD7B82AA52BBD00A5D782 /* TableViewController.swift in Sources */,
+				175DD7B62AA5165100A5D782 /* ImageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -294,6 +320,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +329,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SMUMLSC.UIExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "UIExample/UIExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,6 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -321,6 +351,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,6 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SMUMLSC.UIExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "UIExample/UIExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
