@@ -10,7 +10,22 @@ import UIKit
 class TimerViewController: UIViewController {
     var seconds = 10
     var timer = Timer()
+    var seg_label = "Repeat"
     
+    @IBAction func segCtrl(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            view.backgroundColor = .black
+            seg_label = "Repeat!"
+            
+            
+            
+        } else if sender.selectedSegmentIndex == 1 {
+            view.backgroundColor = .orange
+            seg_label = "Times Up!"
+            
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //timerAction()
@@ -34,7 +49,7 @@ class TimerViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerViewController.counter), userInfo: nil, repeats: true)
         
         sliderOutlet.isHidden = true
-        view.backgroundColor = .lightGray
+        
         startOutlet.isHidden = true
         
     }
@@ -58,18 +73,23 @@ class TimerViewController: UIViewController {
     @objc func counter()
     {
         seconds -= 1
-        label.text = String(seconds) + "seconds"
+        label.text = String(seconds) + " seconds"
         if (seconds == 0)
         {
-            view.backgroundColor = .yellow
-            timer.invalidate()
-            label.text = "Times up!"
-            //sliderOutlet.isHidden = false
-            startOutlet.isHidden = false
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerViewController.counter), userInfo: nil, repeats: true)
-            seconds = 10
             
+            timer.invalidate()
+            //label.text = "Times up!"
+            label.text = seg_label
+            startOutlet.isHidden = false
+            seconds = 10
             startOutlet.isHidden = true
+            
+            if (seg_label == "Times Up!"){
+                timer.invalidate()
+            }else{
+                timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerViewController.counter), userInfo: nil, repeats: true)
+                
+            }
         }
     }
     

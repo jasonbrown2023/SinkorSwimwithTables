@@ -107,10 +107,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGN-rs-bl7">
-                                <rect key="frame" x="44" y="493" width="110" height="35"/>
+                                <rect key="frame" x="68" y="493" width="62" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="startButton">
+                                <buttonConfiguration key="configuration" style="plain" title="Start">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                     </backgroundConfiguration>
@@ -120,10 +120,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiN-LM-gf8">
-                                <rect key="frame" x="217" y="493" width="109" height="35"/>
+                                <rect key="frame" x="242" y="493" width="60" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="stopButton">
+                                <buttonConfiguration key="configuration" style="plain" title="Stop">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                     </backgroundConfiguration>
@@ -139,18 +139,34 @@
                                     <action selector="time_slider:" destination="FKB-hL-ae5" eventType="valueChanged" id="v2q-HS-nOG"/>
                                 </connections>
                             </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tc7-Z6-AP2">
+                                <rect key="frame" x="131" y="103" width="131" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="phM-jo-yeU"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Repeat"/>
+                                    <segment title="No Repeat"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segCtrl:" destination="FKB-hL-ae5" eventType="valueChanged" id="wfc-hZ-dcC"/>
+                                </connections>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHl-Q1-EaA">
                                 <rect key="frame" x="44" y="212" width="282" height="114"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="tintColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yAU-db-D2g"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yAU-db-D2g" firstAttribute="trailing" secondItem="tc7-Z6-AP2" secondAttribute="trailing" constant="131" id="ApG-Qx-CcM"/>
                             <constraint firstItem="zHl-Q1-EaA" firstAttribute="leading" secondItem="yAU-db-D2g" secondAttribute="leading" constant="80" id="Aye-iV-ucl"/>
+                            <constraint firstItem="tc7-Z6-AP2" firstAttribute="leading" secondItem="yAU-db-D2g" secondAttribute="leading" constant="131" id="BLS-cr-129"/>
                             <constraint firstItem="yAU-db-D2g" firstAttribute="trailing" secondItem="zHl-Q1-EaA" secondAttribute="trailing" id="Cdf-ye-bnZ"/>
+                            <constraint firstItem="tc7-Z6-AP2" firstAttribute="top" secondItem="yAU-db-D2g" secondAttribute="top" id="Jty-kf-zSY"/>
                             <constraint firstItem="yAU-db-D2g" firstAttribute="trailing" secondItem="zHl-Q1-EaA" secondAttribute="trailing" constant="128" id="Kft-jV-zgf"/>
                             <constraint firstItem="zHl-Q1-EaA" firstAttribute="top" secondItem="yAU-db-D2g" secondAttribute="top" constant="151" id="PBA-iZ-OZ1"/>
                             <constraint firstItem="yAU-db-D2g" firstAttribute="trailing" secondItem="zHl-Q1-EaA" secondAttribute="trailing" constant="128" id="QE9-eL-z7e"/>
@@ -281,6 +297,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
